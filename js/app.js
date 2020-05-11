@@ -5,10 +5,10 @@ alert('To know me better please answer the following quesions by typing : yes or
 
 
 var drink = prompt('do I like coffee?');
- drink=drink.toLowerCase()
-if (drink === 'y') {
+ 
+if (drink.toLowerCase() === 'y') {
     alert('you are right');
-}else if (drink === 'yes') {
+}else if (drink.toLowerCase() === 'yes') {
         alert('you are right');
 }else {
         alert('sorry It\'s not right')
@@ -30,10 +30,10 @@ console.log('food=',food)
 
 
 var sport = prompt('do I like waking?');
-sport=sport.toLowerCase()
-if (sport === 'y') {
+
+if (sport.toLowerCase() === 'y') {
     alert('you are right');
-}else if (sport === 'yes') {
+}else if (sport.toLowerCase() === 'yes') {
         alert('you are right');
 }else {
         alert('sorry It\'s not right')
@@ -45,10 +45,10 @@ console.log('sport=',sport)
 
 
 var place = prompt('do I live in zarqa ?');
-place=place.toLowerCase()
-if (place === 'y') {
+
+if (place.toLowerCase() === 'y') {
     alert('you are right');
-}else if (place === 'yes') {
+}else if (place.toLowerCase() === 'yes') {
     alert('you are right');
 }else {
     alert('sorry It\'s not right')
@@ -58,10 +58,10 @@ console.log('place=',place)
 
 
 var hair = prompt('do I have long hair?');
-hair=hair.toLowerCase()
-if (hair === 'y') {
+
+if (hair.toLowerCase() === 'y') {
     alert('you are right');
-}else if (hair === 'yes') {
+}else if (hair.toLowerCase() === 'yes') {
     alert('you are right');
 }else {
     alert('sorry It\'s not right')
