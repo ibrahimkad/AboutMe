@@ -1,15 +1,23 @@
-'use strict'
+'use strict';
+var score=0;
+
+
+
+
+
 var uname = prompt('what is your name?')
 alert('Hello ' + uname)
 alert('To know me better please answer the following quesions by typing : yes or no or y or n');
-
+var drink
 function drink() {
-    var drink = prompt('do I like tea?');
+    drink = prompt('do I like tea?');
 
     if (drink.toLowerCase() === 'y') {
         alert('you are right');
+        score++;
     } else if (drink.toLowerCase() === 'yes') {
         alert('you are right');
+        score++;
     } else {
         alert('sorry It\'s not right')
     }
@@ -18,12 +26,15 @@ function drink() {
 }
 drink();
 //  second question
-function Food() {
-    var food = prompt('do I like shawarma?')
+var food
+function food() {
+    food = prompt('do I like shawarma?')
     if (food.toLowerCase() === 'y') {
 
         alert('of course ,who don\'t');
+        score++;
     } else if (food.toLowerCase() === 'yes') {
+        score++;
         alert('of course ,who don\'t');
     } else {
         alert('sorry It\'s not right')
@@ -31,17 +42,20 @@ function Food() {
 
     console.log('food=', food)
 }
-Food();
+food();
 
 
 //  third question
+var sport
 function sport() {
-    var sport = prompt('do I like waking?');
+    sport = prompt('do I like waking?');
 
     if (sport.toLowerCase() === 'y') {
         alert('you are right');
+        score++;
     } else if (sport.toLowerCase() === 'yes') {
         alert('you are right');
+        score++;
     } else {
         alert('sorry It\'s not right')
     }
@@ -53,13 +67,16 @@ sport();
 
 
 //  fourth question
+var place
 function place() {
-    var place = prompt('do I live in zarqa ?');
+    place = prompt('do I live in zarqa ?');
 
     if (place.toLowerCase() === 'y') {
         alert('you are right');
+        score++;
     } else if (place.toLowerCase() === 'yes') {
         alert('you are right');
+        score++;
     } else {
         alert('sorry It\'s not right')
     }
@@ -69,32 +86,35 @@ function place() {
 place();
 
 // fifth question
-
-function Hair() {
-    var hair = prompt('do I have long hair?');
+var hair
+function hair() {
+    hair = prompt('do I have long hair?');
 
     if (hair.toLowerCase() === 'y') {
         alert('you are right');
+        score++;
     } else if (hair.toLowerCase() === 'yes') {
         alert('you are right');
+        score++;
     } else {
         alert('sorry It\'s not right')
     }
 
     console.log('hair=', hair)
 }
-Hair();
+hair();
 
 //  alert
 alert('Hope you know me well now ' + uname)
 
 //  sixth question
-
+var quiz
 function quiz() {
     for (var i = 1; i < 5; i++) {
-        var quiz = prompt('what is the number that give remainder equal to 1 when divided on 6,5,4,3,2 ');
+        quiz = prompt('what is the number that give remainder equal to 1 when divided on 6,5,4,3,2 ');
         if (quiz == '61') {
             alert('right,you are smart');
+            score++;
             break;
 
         } else if (quiz < '61') {
@@ -127,47 +147,57 @@ quiz();
 
 //  last question 
 
+var check = false;
+var treetype = ['fig', 'orange', 'blueberry', 'almond'];
 function tree() {
-    var tree1 = ['fig', 'orange', 'blueberry', 'almond'];
-    var tree = prompt('I like many trees,guess one of them');
-    for (var a in tree1) {
-        if (tree === tree1[a]) {
-            alert('right ,look like you like tree');
-            break;
 
-        } else {
-            alert('sorry try again');
-            tree = prompt('I like many trees,guess one of them');
+    for (var attempt = 0; attempt < 6; attempt++) {
+        //attempt  = 2
+        var tree = prompt('I like many trees,guess one of them');//abc
+        //for (var a in tree1) {
+        for (var j = 0; j < treetype.length; j++) {//j= 0 
+            if (tree === treetype[j]) {//abc >>> fig
+                alert('right ,look like you like tree');
+                score++;
+                check = true;
+                break;
+            } 
         }
-
-        for (var x = 0; x < 6; x++) {
-
+        if (check === true) {
+            break;
         }
     }
 
 }
-
+tree();
 
 //counter
-function counter1(counter) {
-    var counter = 0
+//var counter = 0
+//function counter1(counter) {
 
 
-    if (drink === 'y' || drink === 'yes') {
-        counter++;
-    }
-    if (food === 'y' || food === 'yes') {
-        counter++;
-    }
-    if (sport === 'y' || sport === 'yes') {
-        counter++;
-    }
-    if (place === 'y' || place === 'yes') {
-        counter++;
-    }
-    if (hair === 'y' || hair === 'yes') {
-        counter++;
-    }
-    console.log(counter)
-    return counter
-}
+// if (drink === 'y' || drink === 'yes') {
+//     counter = counter + 1;
+// }
+// if (food === 'y' || food === 'yes') {
+//     counter = counter + 1;
+// }
+// if (sport === 'y' || sport === 'yes') {
+//     counter = counter + 1;
+// }
+// if (place === 'y' || place === 'yes') {
+//     counter = counter + 1;
+// }
+// if (hair === 'y' || hair === 'yes') {
+//     counter = counter + 1;
+// }
+// if (quiz === 'y' || quiz === 'yes') {
+//     counter = counter + 1;
+// }
+// if (tree === 'y' || tree === 'yes') {
+//     counter = counter + 1;
+// }
+alert('your score:' + score)
+console.log(score);
+    //return counter
+//}
