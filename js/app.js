@@ -5,10 +5,10 @@ var score=0;
 
 
 
-var uname = prompt('what is your name?')
-alert('Hello ' + uname)
+var uname = prompt('what is your name?');
+alert('Hello ' + uname);
 alert('To know me better please answer the following quesions by typing : yes or no or y or n');
-var drink
+var drink;
 function drink() {
     drink = prompt('do I like tea?');
 
@@ -19,16 +19,14 @@ function drink() {
         alert('you are right');
         score++;
     } else {
-        alert('sorry It\'s not right')
+        alert('sorry It\'s not right');
     }
-
-    console.log('drink=', drink);
 }
 drink();
 //  second question
 var food
 function food() {
-    food = prompt('do I like shawarma?')
+    food = prompt('do I like shawarma?');
     if (food.toLowerCase() === 'y') {
 
         alert('of course ,who don\'t');
@@ -37,10 +35,8 @@ function food() {
         score++;
         alert('of course ,who don\'t');
     } else {
-        alert('sorry It\'s not right')
+        alert('sorry It\'s not right');
     }
-
-    console.log('food=', food)
 }
 food();
 
@@ -57,10 +53,8 @@ function sport() {
         alert('you are right');
         score++;
     } else {
-        alert('sorry It\'s not right')
+        alert('sorry It\'s not right');
     }
-
-    console.log('sport=', sport);
 }
 sport();
 
@@ -78,10 +72,8 @@ function place() {
         alert('you are right');
         score++;
     } else {
-        alert('sorry It\'s not right')
+        alert('sorry It\'s not right');
     }
-
-    console.log('place=', place)
 }
 place();
 
@@ -97,15 +89,13 @@ function hair() {
         alert('you are right');
         score++;
     } else {
-        alert('sorry It\'s not right')
+        alert('sorry It\'s not right');
     }
-
-    console.log('hair=', hair)
 }
 hair();
 
 //  alert
-alert('Hope you know me well now ' + uname)
+alert('Hope you know me well now ' + uname);
 
 //  sixth question
 var quiz
@@ -129,21 +119,6 @@ function quiz() {
     }
 }
 quiz();
-// TODO //create counter to 6 
-// TODO // create loop 
-// TODO // create array
-// TODO //loop
-// TODO //check if answer in array
-
-
-// var myArray = [1, 2, 3, 4, 5];
-// var x = 4;
-// for(var i in myArray){
-//     // if(x === myArray[i]){
-//     //     //do something
-//     // }
-//     console.log(myArray[i]);
-//}
 
 //  last question 
 
@@ -152,11 +127,10 @@ var treetype = ['fig', 'orange', 'blueberry', 'almond'];
 function tree() {
 
     for (var attempt = 0; attempt < 6; attempt++) {
-        //attempt  = 2
-        var tree = prompt('I like many trees,guess one of them');//abc
+        var tree = prompt('I like many trees,guess one of them');
         //for (var a in tree1) {
-        for (var j = 0; j < treetype.length; j++) {//j= 0 
-            if (tree === treetype[j]) {//abc >>> fig
+        for (var j = 0; j < treetype.length; j++) { 
+            if (tree === treetype[j]) {
                 alert('right ,look like you like tree');
                 score++;
                 check = true;
@@ -171,33 +145,7 @@ function tree() {
 }
 tree();
 
-//counter
-//var counter = 0
-//function counter1(counter) {
 
+alert('your score:' + score);
 
-// if (drink === 'y' || drink === 'yes') {
-//     counter = counter + 1;
-// }
-// if (food === 'y' || food === 'yes') {
-//     counter = counter + 1;
-// }
-// if (sport === 'y' || sport === 'yes') {
-//     counter = counter + 1;
-// }
-// if (place === 'y' || place === 'yes') {
-//     counter = counter + 1;
-// }
-// if (hair === 'y' || hair === 'yes') {
-//     counter = counter + 1;
-// }
-// if (quiz === 'y' || quiz === 'yes') {
-//     counter = counter + 1;
-// }
-// if (tree === 'y' || tree === 'yes') {
-//     counter = counter + 1;
-// }
-alert('your score:' + score)
-console.log(score);
-    //return counter
-//}
+ 
